@@ -50,7 +50,7 @@
             <property name="lastKnownAttributeType" class="java.lang.Class" id="4">kapow.robot.plugin.common.domain.IntegerAttributeType</property>
           </property>
           <property name="word_id" class="AttributeAssignment">
-            <property name="attributeValue" class="String">80</property>
+            <property name="attributeValue" class="String">606</property>
             <property name="currentlyAssigned" idref="3"/>
             <property name="lastKnownAttributeType" idref="4"/>
           </property>
