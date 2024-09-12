@@ -49,11 +49,6 @@
             <property name="currentlyAssigned" class="Boolean" id="3">true</property>
             <property name="lastKnownAttributeType" class="java.lang.Class" id="4">kapow.robot.plugin.common.domain.IntegerAttributeType</property>
           </property>
-          <property name="word_id" class="AttributeAssignment">
-            <property name="attributeValue" class="String">1296</property>
-            <property name="currentlyAssigned" idref="3"/>
-            <property name="lastKnownAttributeType" idref="4"/>
-          </property>
         </property>
       </property>
     </object>
