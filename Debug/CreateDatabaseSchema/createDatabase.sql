@@ -1,55 +1,64 @@
-USE mondictionary;
+-- Create the database
+CREATE DATABASE IF NOT EXISTS MonDictionary;
 
--- Drop tables in reverse order to respect foreign key constraints
-DROP TABLE IF EXISTS synonyms;
-DROP TABLE IF EXISTS definitions;
-DROP TABLE IF EXISTS words;
-DROP TABLE IF EXISTS languages;
-DROP TABLE IF EXISTS pos;
+-- Use the database
+USE MonDictionary;
 
--- First create pos table since it's referenced by others
-CREATE TABLE pos (
-    pos_id INT AUTO_INCREMENT PRIMARY KEY,
-    pos_mon VARCHAR(100) NOT NULL,
-    pos_mn VARCHAR(100) NOT NULL,
-    pos_myanmar VARCHAR(100) NOT NULL,
-    pos_mm VARCHAR(100) NOT NULL,
-    pos_english VARCHAR(100) NOT NULL,
-    pos_en VARCHAR(100) NOT NULL,
-    pos_thai VARCHAR(100) NOT NULL,
-    pos_th VARCHAR(100) NOT NULL
-);
-
-CREATE TABLE languages (
+-- Create Languages Table
+CREATE TABLE IF NOT EXISTS Languages (
     language_id INT AUTO_INCREMENT PRIMARY KEY,
-    language_name VARCHAR(100) NOT NULL
+    language_code VARCHAR(10) NOT NULL,
+    language_name VARCHAR(100) NOT NULL,
+    UNIQUE (language_code)
 );
 
-CREATE TABLE words (
+-- Create the Part Of Speech table
+CREATE TABLE IF NOT EXISTS PartOfSpeech (
+    pos_id INT AUTO_INCREMENT PRIMARY KEY,
+    pos_ENname VARCHAR(50) NOT NULL,
+    pos_ENsymbol VARCHAR(50) NOT NULL,
+    pos_Monname VARCHAR(255) NULL,
+    pos_Monsymbol VARCHAR(50) NULL,
+    pos_Mmname VARCHAR(255) NULL,
+    pos_Mmsymbol VARCHAR(50) NULL
+);
+
+-- Create Word Table
+CREATE TABLE IF NOT EXISTS Word (
     word_id INT AUTO_INCREMENT PRIMARY KEY,
-    word VARCHAR(255) NOT NULL,
-    pronunciation VARCHAR(255),
-    language_id INT,
-    FOREIGN KEY (language_id) REFERENCES languages(language_id)
+    word VARCHAR(1000) NOT NULL,
+    pronunciation VARCHAR(500),
+    language_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (language_id) REFERENCES Languages(language_id)
 );
 
-CREATE TABLE definitions (
-    def_id INT AUTO_INCREMENT PRIMARY KEY,
-    word_id INT,
-    language_id INT,
-    pos_id INT,
+-- Create Definition Table
+CREATE TABLE IF NOT EXISTS Definition (
+    definition_id INT AUTO_INCREMENT PRIMARY KEY,
+    word_id INT NOT NULL,
+    language_id INT NOT NULL,
+    pos_id INT NOT NULL,
     definition TEXT NOT NULL,
-    example TEXT NOT NULL,
-    FOREIGN KEY (word_id) REFERENCES words(word_id),
-    FOREIGN KEY (language_id) REFERENCES languages(language_id),
-    FOREIGN KEY (pos_id) REFERENCES pos(pos_id)
+    example TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (word_id) REFERENCES Word(word_id) ON DELETE CASCADE,
+    FOREIGN KEY (pos_id) REFERENCES PartOfSpeech(pos_id),
+    FOREIGN KEY (language_id) REFERENCES Languages(language_id)
 );
 
-CREATE TABLE synonyms (
+-- Create Synonym Table (Optional)
+CREATE TABLE IF NOT EXISTS Synonym (
     synonym_id INT AUTO_INCREMENT PRIMARY KEY,
-    word_id INT,
-    language_id INT,
-    synonym TEXT NOT NULL,
-    FOREIGN KEY (word_id) REFERENCES words(word_id),
-    FOREIGN KEY (language_id) REFERENCES languages(language_id)
+    word_id INT NOT NULL,
+    language_id INT NOT NULL,
+    synonym VARCHAR(500) NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (word_id) REFERENCES Word(word_id) ON DELETE CASCADE,
+    FOREIGN KEY (language_id) REFERENCES Languages(language_id)
 );
+
+-- Indexes for fast lookups (Optional, depending on performance needs)
+CREATE INDEX idx_word ON Word (word);
+CREATE INDEX idx_word_id ON Definition (word_id);
+CREATE INDEX idx_word_id_synonym ON Synonym (word_id);
