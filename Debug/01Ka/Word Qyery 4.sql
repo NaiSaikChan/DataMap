@@ -1,6 +1,6 @@
 -- Active: 1734917869964@@127.0.0.1@3306@mondictionary
-INSERT INTO mondictionary.words
-(`word_id`,`word`,`pronunciation`,`language_id`)
+INSERT INTO mondictionary.word 
+(word_id,word,pronunciation,language_id)
 VALUES 
 (816,'ကောန်',null,2)
 ,(817,'ကောန်ကလောန်',null,2)

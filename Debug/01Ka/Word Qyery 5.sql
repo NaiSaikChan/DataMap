@@ -1,3 +1,6 @@
+INSERT INTO mondictionary.word
+(word_id,word,pronunciation,language_id)
+VALUES
 (1103,'ကဟ်',null,2)
 ,(1104,'ကဟ်ခြေဲ',null,2)
 ,(1105,'ကဟ်ဇတ်',null,2)
@@ -573,4 +576,4 @@
 ,(1688,'ကြောအ်ဗေံ',null,2)
 ,(1689,'ကြောအ်အဳ',null,2)
 ,(1690,'ကြိုအ်',null,2)
-,
+;
