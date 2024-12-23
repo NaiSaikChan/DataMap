@@ -158,7 +158,7 @@
         <property name="name" idref="15"/>
         <property name="stepAction" class="LoadFile">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.FileNameValueStringExpression">
-            <property name="value" class="String">D:\Mon Data\Mon Dictionary\DataMap\Library\</property>
+            <property name="value" class="String">D:\Mon Data\Mon Dictionary\DataMap\Library\SourceTest.txt</property>
           </property>
           <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="27">
             <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
@@ -246,8 +246,9 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Try" id="25"/>
-      <object class="Transition" serializationversion="3" id="26">
+      <object class="BranchPoint" id="25"/>
+      <object class="Try" id="26"/>
+      <object class="Transition" serializationversion="3" id="27">
         <property name="name" class="String">Convert POSID</property>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
@@ -266,26 +267,21 @@
                 <element class="ConvertUsingList">
                   <property name="mapString" class="String">န=1
 စန=2
-ကြိ=3
-နဝိ=4
+နဝိ=3
+ကြိ=4
 ကြိဝိ=5
 ဝိ=6
 သမ=7
-ဆဝ=8
-လပ=9
-ပည=10
-န/ကြိ=11
-စည်း=12
-ပါ=14
-ကြိ/နဝိ=15
-န/နဝိ=16
-နဝိ/ကြိ=17
-ပါသက်=18
-သသက်=19
-ကြိ/ကြိဝိ=20
-</property>
-                  <property name="mode" class="Integer" id="27">2</property>
-                  <property name="defaultValue" class="String">21</property>
+အမဍ=8
+စည်း=9
+ပါ=10
+ပါသက်=11
+သသက်=12
+မြန်သက်=13
+လိပ်သက်=14
+ယိုး=15</property>
+                  <property name="mode" class="Integer" id="28">2</property>
+                  <property name="defaultValue" class="String">16</property>
                 </element>
               </property>
               <property name="toAttributeName" class="kapow.robot.plugin.common.support.AttributeName">
@@ -308,7 +304,7 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="28">
+      <object class="Transition" serializationversion="3" id="29">
         <property name="name" class="String">Convert Word</property>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
@@ -348,8 +344,8 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Try" id="29"/>
-      <object class="Transition" serializationversion="3" id="30">
+      <object class="Try" id="30"/>
+      <object class="Transition" serializationversion="3" id="31">
         <property name="name" class="String">Convert Defination with  Example</property>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
@@ -384,22 +380,22 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="BranchPoint" id="31"/>
-      <object class="Transition" serializationversion="3" id="32">
+      <object class="BranchPoint" id="32"/>
+      <object class="Transition" serializationversion="3" id="33">
         <property name="name" class="String">Word and synonym</property>
         <property name="stepAction" class="Wait2"/>
-        <property name="elementFinders" class="ElementFinders" id="33"/>
+        <property name="elementFinders" class="ElementFinders" id="34"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
         </property>
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element class="String" id="34">name</element>
+          <element class="String" id="35">name</element>
         </property>
       </object>
-      <object class="Try" id="35"/>
-      <object class="Transition" serializationversion="3" id="36">
+      <object class="Try" id="36"/>
+      <object class="Transition" serializationversion="3" id="37">
         <property name="name" class="String">Test Variables </property>
         <property name="stepAction" class="TestVariables" serializationversion="0">
           <property name="conditions" class="kapow.robot.plugin.common.stateprocessor.attributefilter.AttributeFilterConditions">
@@ -414,7 +410,7 @@
             </object>
           </property>
         </property>
-        <property name="elementFinders" idref="33"/>
+        <property name="elementFinders" idref="34"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0">
           <property name="reportingViaAPI" idref="11"/>
           <property name="reportingViaLog" idref="11"/>
@@ -423,11 +419,11 @@
         <property name="comment" class="String">synonym</property>
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="34"/>
+          <element idref="35"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="37">
-        <property name="name" class="String" id="38">Convert Variables</property>
+      <object class="Transition" serializationversion="3" id="38">
+        <property name="name" class="String" id="39">Convert Variables</property>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
             <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
@@ -487,7 +483,7 @@
             </object>
           </property>
         </property>
-        <property name="elementFinders" idref="33"/>
+        <property name="elementFinders" idref="34"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -495,8 +491,8 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="BranchPoint" id="39"/>
-      <object class="Transition" serializationversion="3" id="40">
+      <object class="BranchPoint" id="40"/>
+      <object class="Transition" serializationversion="3" id="41">
         <property name="name" idref="22"/>
         <property name="stepAction" class="ForEachTextPart">
           <property name="input" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -508,7 +504,7 @@
             <property name="name" idref="2"/>
           </property>
         </property>
-        <property name="elementFinders" idref="33"/>
+        <property name="elementFinders" idref="34"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -516,8 +512,8 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="41">
-        <property name="name" idref="38"/>
+      <object class="Transition" serializationversion="3" id="42">
+        <property name="name" idref="39"/>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
             <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
@@ -533,7 +529,7 @@
             </object>
           </property>
         </property>
-        <property name="elementFinders" idref="33"/>
+        <property name="elementFinders" idref="34"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -541,7 +537,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="42">
+      <object class="Transition" serializationversion="3" id="43">
         <property name="name" class="String">Assign Query 1</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
@@ -561,7 +557,7 @@
             <property name="name" idref="8"/>
           </property>
         </property>
-        <property name="elementFinders" idref="33"/>
+        <property name="elementFinders" idref="34"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -569,7 +565,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="43">
+      <object class="Transition" serializationversion="3" id="44">
         <property name="name" class="String">Write Synonym File</property>
         <property name="stepAction" class="WriteFile" serializationversion="0">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -578,7 +574,7 @@
           <property name="fileContentExpression" class="Expression" serializationversion="1">
             <property name="text" class="String">query1+"\n,"</property>
           </property>
-          <property name="appendToFile" class="Boolean">true</property>
+          <property name="appendToFile" idref="3"/>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
@@ -587,11 +583,11 @@
         </property>
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="34"/>
+          <element idref="35"/>
         </property>
       </object>
-      <object class="End" id="44"/>
-      <object class="Transition" serializationversion="3" id="45">
+      <object class="End" id="45"/>
+      <object class="Transition" serializationversion="3" id="46">
         <property name="name" class="String">Assign Query 1</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
@@ -619,7 +615,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="46">
+      <object class="Transition" serializationversion="3" id="47">
         <property name="name" class="String">Write Word File</property>
         <property name="stepAction" class="WriteFile" serializationversion="0">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -628,8 +624,8 @@
           <property name="fileContentExpression" class="Expression" serializationversion="1">
             <property name="text" class="String">query1+"\n,"</property>
           </property>
-          <property name="appendToFile" class="Boolean">true</property>
-          <property name="executeInRoboMaker" class="Boolean">true</property>
+          <property name="appendToFile" idref="3"/>
+          <property name="executeInRoboMaker" idref="3"/>
         </property>
         <property name="elementFinders" class="ElementFinders"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
@@ -638,10 +634,10 @@
         </property>
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="34"/>
+          <element idref="35"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="47">
+      <object class="Transition" serializationversion="3" id="48">
         <property name="name" class="String">Assign Int G2</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.ComplexVariableAllowedVariableExpression" serializationversion="2">
@@ -661,22 +657,22 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="48"/>
-      <object class="Transition" serializationversion="3" id="49">
+      <object class="End" id="49"/>
+      <object class="Transition" serializationversion="3" id="50">
         <property name="name" class="String">Defination and Example</property>
         <property name="stepAction" class="Wait2"/>
-        <property name="elementFinders" idref="33"/>
+        <property name="elementFinders" idref="34"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
         </property>
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="34"/>
+          <element idref="35"/>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="50">
-        <property name="name" idref="38"/>
+      <object class="Transition" serializationversion="3" id="51">
+        <property name="name" idref="39"/>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
             <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
@@ -706,7 +702,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="51">
+      <object class="Transition" serializationversion="3" id="52">
         <property name="name" idref="22"/>
         <property name="stepAction" class="ForEachTextPart">
           <property name="input" class="kapow.robot.plugin.common.support.expression.multipletype.VariableExpression" serializationversion="2">
@@ -729,8 +725,8 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="52">
-        <property name="name" idref="38"/>
+      <object class="Transition" serializationversion="3" id="53">
+        <property name="name" idref="39"/>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
             <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
@@ -761,7 +757,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="53">
+      <object class="Transition" serializationversion="3" id="54">
         <property name="name" class="String">Assign Query 2</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
@@ -773,7 +769,7 @@
                 <property name="pattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PartialInputMatchingPatternValueStringExpression">
                   <property name="value" class="String">(\()('word_id')(,)('language_id')(,)('pos_id')(,')(definition)(',)('example')(\))</property>
                 </property>
-                <property name="replaceExp" class="String">$1+dic.word_id+$3+"4"+$5+dic.pos_id+$7+dic.defi+$9+(dic.example!=""?dic.example:"null")+$11</property>
+                <property name="replaceExp" class="String">$1+dic.word_id+$3+"3"+$5+dic.pos_id+$7+dic.defi+$9+(dic.example!=""?dic.example:"null")+$11</property>
               </element>
             </property>
           </property>
@@ -789,7 +785,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="54">
+      <object class="Transition" serializationversion="3" id="55">
         <property name="name" class="String">Write Defination File</property>
         <property name="stepAction" class="WriteFile" serializationversion="0">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
@@ -798,7 +794,7 @@
           <property name="fileContentExpression" class="Expression" serializationversion="1">
             <property name="text" class="String">query2+"\n,"</property>
           </property>
-          <property name="appendToFile" class="Boolean">true</property>
+          <property name="appendToFile" idref="3"/>
         </property>
         <property name="elementFinders" idref="18"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
@@ -807,11 +803,11 @@
         </property>
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet">
-          <element idref="34"/>
+          <element idref="35"/>
         </property>
       </object>
-      <object class="End" id="55"/>
-      <object class="Transition" serializationversion="3" id="56">
+      <object class="End" id="56"/>
+      <object class="Transition" serializationversion="3" id="57">
         <property name="name" class="String">Convert Defination no Example</property>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
@@ -842,8 +838,8 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="BranchPoint" id="57"/>
-      <object class="Transition" serializationversion="3" id="58">
+      <object class="BranchPoint" id="58"/>
+      <object class="Transition" serializationversion="3" id="59">
         <property name="name" class="String">Convert POSID</property>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
@@ -880,8 +876,8 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="59">
-        <property name="name" class="String" id="60">Write File</property>
+      <object class="Transition" serializationversion="3" id="60">
+        <property name="name" class="String" id="61">Write File</property>
         <property name="stepAction" class="WriteFile" serializationversion="0">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
             <property name="value" class="String">D:\Mon Data\Mon Dictionary\DataMap\pos.txt</property>
@@ -902,8 +898,8 @@
               </element>
             </property>
           </property>
-          <property name="appendToFile" class="Boolean">true</property>
-          <property name="executeInRoboMaker" class="Boolean">true</property>
+          <property name="appendToFile" idref="3"/>
+          <property name="executeInRoboMaker" idref="3"/>
         </property>
         <property name="elementFinders" idref="18"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
@@ -913,9 +909,10 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="61"/>
-      <object class="Transition" serializationversion="3" id="62">
-        <property name="name" idref="60"/>
+      <object class="End" id="62"/>
+      <object class="End" id="63"/>
+      <object class="Transition" serializationversion="3" id="64">
+        <property name="name" idref="61"/>
         <property name="stepAction" class="WriteFile" serializationversion="0">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
             <property name="value" class="String">D:\Mon Data\Mon Dictionary\DataMap\lastWordID.txt</property>
@@ -925,7 +922,7 @@
               <property name="name" idref="7"/>
             </property>
           </property>
-          <property name="executeInRoboMaker" class="Boolean">true</property>
+          <property name="executeInRoboMaker" idref="3"/>
         </property>
         <property name="elementFinders" idref="16"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
@@ -935,11 +932,11 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="63"/>
-      <object class="Transition" serializationversion="3" id="64">
+      <object class="End" id="65"/>
+      <object class="Transition" serializationversion="3" id="66">
         <property name="name" class="String">Stop</property>
         <property name="stepAction" class="Stop"/>
-        <property name="elementFinders" class="ElementFinders" id="65"/>
+        <property name="elementFinders" class="ElementFinders" id="67"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -947,11 +944,11 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="BranchPoint" id="66"/>
-      <object class="Transition" serializationversion="3" id="67">
+      <object class="BranchPoint" id="68"/>
+      <object class="Transition" serializationversion="3" id="69">
         <property name="name" class="String">Wait</property>
         <property name="stepAction" class="Wait2"/>
-        <property name="elementFinders" class="ElementFinders" id="68"/>
+        <property name="elementFinders" class="ElementFinders" id="70"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -959,7 +956,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="69">
+      <object class="Transition" serializationversion="3" id="71">
         <property name="name" idref="15"/>
         <property name="stepAction" class="LoadFile">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.FileNameValueStringExpression">
@@ -974,7 +971,7 @@
             <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
           </property>
         </property>
-        <property name="elementFinders" idref="65"/>
+        <property name="elementFinders" idref="67"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -982,10 +979,10 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="70">
+      <object class="Transition" serializationversion="3" id="72">
         <property name="name" class="String">Repeat</property>
         <property name="stepAction" class="Repeat"/>
-        <property name="elementFinders" idref="65"/>
+        <property name="elementFinders" idref="67"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -993,9 +990,9 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="BranchPoint" id="71"/>
-      <object class="Transition" serializationversion="3" id="72">
-        <property name="name" idref="38"/>
+      <object class="BranchPoint" id="73"/>
+      <object class="Transition" serializationversion="3" id="74">
+        <property name="name" idref="39"/>
         <property name="stepAction" class="ConvertVariables">
           <property name="entries" class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntries">
             <object class="kapow.robot.plugin.common.stateprocessor.attributeconverter.AttributeConverterEntry" serializationversion="0">
@@ -1033,7 +1030,7 @@
             </object>
           </property>
         </property>
-        <property name="elementFinders" idref="65"/>
+        <property name="elementFinders" idref="67"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0">
           <property name="reportingViaAPI" idref="11"/>
           <property name="reportingViaLog" idref="11"/>
@@ -1045,8 +1042,8 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="73">
-        <property name="name" idref="60"/>
+      <object class="Transition" serializationversion="3" id="75">
+        <property name="name" idref="61"/>
         <property name="stepAction" class="WriteFile" serializationversion="0">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.ValueStringExpression">
             <property name="value" class="String">D:\Mon Data\Mon Dictionary\DataMap\Synonym Qyery4.sql</property>
@@ -1056,19 +1053,7 @@
           </property>
           <property name="appendToFile" idref="3"/>
         </property>
-        <property name="elementFinders" idref="65"/>
-        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
-        <property name="comment">
-          <null/>
-        </property>
-        <property name="enabled" idref="3"/>
-        <property name="changedProperties" class="java.util.HashSet"/>
-      </object>
-      <object class="End" id="74"/>
-      <object class="Transition" serializationversion="3" id="75">
-        <property name="name" class="String">Next</property>
-        <property name="stepAction" class="Next"/>
-        <property name="elementFinders" idref="65"/>
+        <property name="elementFinders" idref="67"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -1078,9 +1063,21 @@
       </object>
       <object class="End" id="76"/>
       <object class="Transition" serializationversion="3" id="77">
+        <property name="name" class="String">Next</property>
+        <property name="stepAction" class="Next"/>
+        <property name="elementFinders" idref="67"/>
+        <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
+        <property name="comment">
+          <null/>
+        </property>
+        <property name="enabled" idref="3"/>
+        <property name="changedProperties" class="java.util.HashSet"/>
+      </object>
+      <object class="End" id="78"/>
+      <object class="Transition" serializationversion="3" id="79">
         <property name="name" class="String">Animals Name</property>
         <property name="stepAction" class="Wait2"/>
-        <property name="elementFinders" idref="68"/>
+        <property name="elementFinders" idref="70"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment" class="String">Animal Name for iOS app.</property>
         <property name="enabled" idref="3"/>
@@ -1088,7 +1085,7 @@
           <element class="String">name</element>
         </property>
       </object>
-      <object class="Transition" serializationversion="3" id="78">
+      <object class="Transition" serializationversion="3" id="80">
         <property name="name" idref="15"/>
         <property name="stepAction" class="LoadFile">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.FileNameValueStringExpression">
@@ -1103,7 +1100,7 @@
             <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
           </property>
         </property>
-        <property name="elementFinders" class="ElementFinders" id="79"/>
+        <property name="elementFinders" class="ElementFinders" id="81"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -1111,14 +1108,14 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="80">
+      <object class="Transition" serializationversion="3" id="82">
         <property name="name" class="String">Open Excel</property>
         <property name="stepAction" class="OpenVariable">
           <property name="variable" class="kapow.robot.plugin.common.support.AttributeName2">
             <property name="name" idref="10"/>
           </property>
         </property>
-        <property name="elementFinders" idref="79"/>
+        <property name="elementFinders" idref="81"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -1126,14 +1123,14 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="BranchPoint" id="81"/>
-      <object class="Transition" serializationversion="3" id="82">
+      <object class="BranchPoint" id="83"/>
+      <object class="Transition" serializationversion="3" id="84">
         <property name="name" class="String">Loop Rows</property>
         <property name="stepAction" class="LoopInExcel">
           <property name="loopDirection" class="LoopInExcel$LoopDirection">
             <property name="enum-name" class="String">ROWS</property>
           </property>
-          <property name="firstIndex" class="Integer" id="83">1</property>
+          <property name="firstIndex" class="Integer" id="85">1</property>
         </property>
         <property name="elementFinders" class="ElementFinders">
           <object class="ExcelElementFinder">
@@ -1151,7 +1148,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="84">
+      <object class="Transition" serializationversion="3" id="86">
         <property name="name" class="String">Extract Word</property>
         <property name="stepAction" class="ExtractCell">
           <property name="dataConverters" class="DataConverters">
@@ -1179,7 +1176,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="85">
+      <object class="Transition" serializationversion="3" id="87">
         <property name="name" class="String">Extract Defi</property>
         <property name="stepAction" class="ExtractCell">
           <property name="dataConverters" class="DataConverters">
@@ -1204,7 +1201,7 @@
               <property name="usage" class="ColumnFromRange">
                 <property name="columnId" class="ByIndexExcelColumnId">
                   <property name="offset" class="kapow.robot.plugin.common.support.expression.integerexpr.ValueIntegerExpression">
-                    <property name="value" idref="83"/>
+                    <property name="value" idref="85"/>
                   </property>
                 </property>
               </property>
@@ -1218,7 +1215,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="86">
+      <object class="Transition" serializationversion="3" id="88">
         <property name="name" class="String">Extract Example</property>
         <property name="stepAction" class="ExtractCell">
           <property name="dataConverters" class="DataConverters">
@@ -1243,7 +1240,7 @@
               <property name="usage" class="ColumnFromRange">
                 <property name="columnId" class="ByIndexExcelColumnId">
                   <property name="offset" class="kapow.robot.plugin.common.support.expression.integerexpr.ValueIntegerExpression">
-                    <property name="value" idref="27"/>
+                    <property name="value" idref="28"/>
                   </property>
                 </property>
               </property>
@@ -1261,7 +1258,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="87">
+      <object class="Transition" serializationversion="3" id="89">
         <property name="name" class="String">Extract Long Text</property>
         <property name="stepAction" class="ExtractCell">
           <property name="dataConverters" class="DataConverters">
@@ -1294,7 +1291,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="88">
+      <object class="Transition" serializationversion="3" id="90">
         <property name="name" class="String">Extract Long Text 2</property>
         <property name="stepAction" class="ExtractCell">
           <property name="dataConverters" class="DataConverters">
@@ -1327,7 +1324,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="89">
+      <object class="Transition" serializationversion="3" id="91">
         <property name="name" class="String">Assign Query 1</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="kapow.robot.plugin.common.support.expression.multipletype.StringProcessorsExpression" serializationversion="0">
@@ -1381,7 +1378,7 @@
             <property name="name" idref="8"/>
           </property>
         </property>
-        <property name="elementFinders" idref="79"/>
+        <property name="elementFinders" idref="81"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -1389,7 +1386,7 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="Transition" serializationversion="3" id="90">
+      <object class="Transition" serializationversion="3" id="92">
         <property name="name" class="String">Assign Query 2</property>
         <property name="stepAction" class="AssignVariable" serializationversion="4">
           <property name="stringExpr" class="Expression" serializationversion="1">
@@ -1399,7 +1396,7 @@
             <property name="name" idref="9"/>
           </property>
         </property>
-        <property name="elementFinders" idref="79"/>
+        <property name="elementFinders" idref="81"/>
         <property name="errorHandler" class="ErrorHandler" serializationversion="0"/>
         <property name="comment">
           <null/>
@@ -1407,8 +1404,8 @@
         <property name="enabled" idref="3"/>
         <property name="changedProperties" class="java.util.HashSet"/>
       </object>
-      <object class="End" id="91"/>
-      <object class="End" id="92"/>
+      <object class="End" id="93"/>
+      <object class="End" id="94"/>
     </steps>
     <blockEndStep class="BlockEndStep"/>
     <edges class="ArrayList">
@@ -1426,7 +1423,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="13"/>
-        <to idref="64"/>
+        <to idref="66"/>
         <name/>
         <comment/>
       </object>
@@ -1456,7 +1453,7 @@
       </object>
       <object class="TransitionEdge">
         <from idref="20"/>
-        <to idref="62"/>
+        <to idref="64"/>
         <name/>
         <comment/>
       </object>
@@ -1486,18 +1483,24 @@
       </object>
       <object class="TransitionEdge">
         <from idref="25"/>
-        <to idref="58"/>
+        <to idref="63"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="26"/>
-        <to idref="28"/>
+        <to idref="27"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="28"/>
+        <from idref="26"/>
+        <to idref="59"/>
+        <name/>
+        <comment/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="27"/>
         <to idref="29"/>
         <name/>
         <comment/>
@@ -1509,14 +1512,14 @@
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="29"/>
-        <to idref="56"/>
+        <from idref="30"/>
+        <to idref="31"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="30"/>
-        <to idref="31"/>
+        <to idref="57"/>
         <name/>
         <comment/>
       </object>
@@ -1527,26 +1530,20 @@
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="31"/>
-        <to idref="49"/>
+        <from idref="32"/>
+        <to idref="33"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="32"/>
-        <to idref="35"/>
+        <to idref="50"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="35"/>
+        <from idref="33"/>
         <to idref="36"/>
-        <name/>
-        <comment/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="35"/>
-        <to idref="45"/>
         <name/>
         <comment/>
       </object>
@@ -1557,26 +1554,32 @@
         <comment/>
       </object>
       <object class="TransitionEdge">
+        <from idref="36"/>
+        <to idref="46"/>
+        <name/>
+        <comment/>
+      </object>
+      <object class="TransitionEdge">
         <from idref="37"/>
-        <to idref="39"/>
+        <to idref="38"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="39"/>
+        <from idref="38"/>
         <to idref="40"/>
-        <name/>
-        <comment/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="39"/>
-        <to idref="45"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="40"/>
         <to idref="41"/>
+        <name/>
+        <comment/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="40"/>
+        <to idref="46"/>
         <name/>
         <comment/>
       </object>
@@ -1599,8 +1602,8 @@
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="45"/>
-        <to idref="46"/>
+        <from idref="44"/>
+        <to idref="45"/>
         <name/>
         <comment/>
       </object>
@@ -1617,8 +1620,8 @@
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="49"/>
-        <to idref="50"/>
+        <from idref="48"/>
+        <to idref="49"/>
         <name/>
         <comment/>
       </object>
@@ -1653,73 +1656,67 @@
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="56"/>
-        <to idref="57"/>
+        <from idref="55"/>
+        <to idref="56"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="57"/>
-        <to idref="53"/>
-        <name/>
-        <comment/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="57"/>
-        <to idref="32"/>
+        <to idref="58"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="58"/>
-        <to idref="59"/>
+        <to idref="54"/>
+        <name/>
+        <comment/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="58"/>
+        <to idref="33"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="59"/>
-        <to idref="61"/>
+        <to idref="60"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="62"/>
-        <to idref="63"/>
+        <from idref="60"/>
+        <to idref="62"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="64"/>
-        <to idref="66"/>
+        <to idref="65"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="66"/>
-        <to idref="67"/>
+        <to idref="68"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="66"/>
-        <to idref="77"/>
-        <name/>
-        <comment/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="67"/>
+        <from idref="68"/>
         <to idref="69"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="69"/>
-        <to idref="70"/>
+        <from idref="68"/>
+        <to idref="79"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="70"/>
+        <from idref="69"/>
         <to idref="71"/>
         <name/>
         <comment/>
@@ -1727,12 +1724,6 @@
       <object class="TransitionEdge">
         <from idref="71"/>
         <to idref="72"/>
-        <name/>
-        <comment/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="71"/>
-        <to idref="75"/>
         <name/>
         <comment/>
       </object>
@@ -1749,6 +1740,18 @@
         <comment/>
       </object>
       <object class="TransitionEdge">
+        <from idref="73"/>
+        <to idref="77"/>
+        <name/>
+        <comment/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="74"/>
+        <to idref="75"/>
+        <name/>
+        <comment/>
+      </object>
+      <object class="TransitionEdge">
         <from idref="75"/>
         <to idref="76"/>
         <name/>
@@ -1761,43 +1764,37 @@
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="78"/>
+        <from idref="79"/>
         <to idref="80"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
         <from idref="80"/>
-        <to idref="81"/>
-        <name/>
-        <comment/>
-      </object>
-      <object class="TransitionEdge">
-        <from idref="81"/>
         <to idref="82"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="81"/>
-        <to idref="92"/>
+        <from idref="82"/>
+        <to idref="83"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="82"/>
+        <from idref="83"/>
         <to idref="84"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="84"/>
-        <to idref="85"/>
+        <from idref="83"/>
+        <to idref="94"/>
         <name/>
         <comment/>
       </object>
       <object class="TransitionEdge">
-        <from idref="85"/>
+        <from idref="84"/>
         <to idref="86"/>
         <name/>
         <comment/>
@@ -1829,6 +1826,18 @@
       <object class="TransitionEdge">
         <from idref="90"/>
         <to idref="91"/>
+        <name/>
+        <comment/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="91"/>
+        <to idref="92"/>
+        <name/>
+        <comment/>
+      </object>
+      <object class="TransitionEdge">
+        <from idref="92"/>
+        <to idref="93"/>
         <name/>
         <comment/>
       </object>
