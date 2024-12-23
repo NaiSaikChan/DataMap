@@ -4,8 +4,15 @@ CREATE DATABASE IF NOT EXISTS MonDictionary;
 -- Use the database
 USE MonDictionary;
 
+-- Drop the tables if they exist
+DROP TABLE IF EXISTS Synonym;
+DROP TABLE IF EXISTS Definition;
+DROP TABLE IF EXISTS Word;
+DROP TABLE IF EXISTS PartOfSpeech;
+DROP TABLE IF EXISTS Languages;
+
 -- Create Languages Table
-CREATE TABLE IF NOT EXISTS Languages (
+CREATE TABLE IF NOT EXISTS Language (
     language_id INT AUTO_INCREMENT PRIMARY KEY,
     language_code VARCHAR(10) NOT NULL,
     language_name VARCHAR(100) NOT NULL,
@@ -30,7 +37,7 @@ CREATE TABLE IF NOT EXISTS Word (
     pronunciation VARCHAR(500),
     language_id INT NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (language_id) REFERENCES Languages(language_id)
+    FOREIGN KEY (language_id) REFERENCES Language(language_id)
 );
 
 -- Create Definition Table
@@ -44,7 +51,7 @@ CREATE TABLE IF NOT EXISTS Definition (
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (word_id) REFERENCES Word(word_id) ON DELETE CASCADE,
     FOREIGN KEY (pos_id) REFERENCES PartOfSpeech(pos_id),
-    FOREIGN KEY (language_id) REFERENCES Languages(language_id)
+    FOREIGN KEY (language_id) REFERENCES Language(language_id)
 );
 
 -- Create Synonym Table (Optional)
@@ -55,10 +62,10 @@ CREATE TABLE IF NOT EXISTS Synonym (
     synonym VARCHAR(500) NOT NULL,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (word_id) REFERENCES Word(word_id) ON DELETE CASCADE,
-    FOREIGN KEY (language_id) REFERENCES Languages(language_id)
+    FOREIGN KEY (language_id) REFERENCES Language(language_id)
 );
 
 -- Indexes for fast lookups (Optional, depending on performance needs)
-CREATE INDEX idx_word ON Word (word);
+CREATE INDEX idx_language_id ON Word (language_id);
 CREATE INDEX idx_word_id ON Definition (word_id);
 CREATE INDEX idx_word_id_synonym ON Synonym (word_id);
