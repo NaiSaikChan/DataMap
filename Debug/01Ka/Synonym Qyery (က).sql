@@ -1,3 +1,6 @@
+INSERT INTO mondictionary.synonym 
+(word_id,language_id,synonym) 
+VALUES 
 (10,2,'ကဍတ်')
 ,(19,2,'ကဂဗံၚ်')
 ,(55,2,'ကမၚ်ကရ်')
@@ -240,4 +243,4 @@
 ,(602,2,'တဟေဲ')
 ,(603,2,'ခၜေတ်')
 ,(604,2,'က္ၜဝ်')
-,
+;
