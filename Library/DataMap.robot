@@ -279,7 +279,8 @@
 သသက်=12
 မြန်သက်=13
 လိပ်သက်=14
-ယိုး=15</property>
+ယိုး=15
+ဟိန္ဒဳ=17</property>
                   <property name="mode" class="Integer" id="28">2</property>
                   <property name="defaultValue" class="String">16</property>
                 </element>
