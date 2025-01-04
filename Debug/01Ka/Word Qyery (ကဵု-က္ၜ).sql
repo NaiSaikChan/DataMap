@@ -2,7 +2,6 @@ INSERT INTO mondictionary.word
 (word_id, word, pronunciation, language_id)
 VALUES
 (1051,'ကဵု',null,2)
-,(1052,'',null,2)
 ,(1053,'ကဵုကသပ်',null,2)
 ,(1054,'ကဵုကွိုက်',null,2)
 ,(1055,'ကဵုကွိုက်ကဵုဒွဵု',null,2)
