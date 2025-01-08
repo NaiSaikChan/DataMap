@@ -1,4 +1,4 @@
-INSERT INTO mondictionary.word
+INSERT INTO word
 (word_id,word,pronunciation,language_id)
 VALUES
 (1,'က—၁',null,2)

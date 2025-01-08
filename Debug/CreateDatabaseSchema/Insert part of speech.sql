@@ -1,6 +1,6 @@
  
  Use MonDictionary;
-INSERT INTO mondictionary.partofspeech
+INSERT INTO partofspeech
 (pos_ENname,pos_ENsymbol,pos_Monname,pos_Monsymbol,pos_Mmname,pos_Mmsymbol)
 VALUES 
 ('noun','n','နာမ်','န','နာမ်','န')
@@ -18,5 +18,8 @@ VALUES
 ,('myanmar','myan','ဗၟာ','ဗၟာ','မြန်မာသက်ဝေါဟာရ','မြန်သက်')
 ,('english','eng','အင်္ဂလိက်','လိက်သက်','အင်္ဂလိပ်သက်ဝေါဟာရ','လိပ်သက်')
 ,('thai','tha','သေံ','သေံ','ယိုးဒယားသက်','ယိုး')
+,('Hyndhu','Hynd','ဟိန္ဒူ','ဟိန္ဒူ','ဟိန္ဒူသက်ဝေါဟာရ','ဟိန္ဒူ')
 ,('Unknow','Unknow','Unknow','Unknow','Unknow','Unknow')
 ;
+
+SELECT * FROM partofspeech;

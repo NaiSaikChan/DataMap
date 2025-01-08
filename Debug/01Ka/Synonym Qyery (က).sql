@@ -1,4 +1,4 @@
-INSERT INTO mondictionary.synonym 
+INSERT INTO Synonym 
 (word_id,language_id,synonym) 
 VALUES 
 (10,2,'ကဍတ်')
