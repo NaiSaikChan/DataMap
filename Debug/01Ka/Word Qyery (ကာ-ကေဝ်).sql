@@ -1,4 +1,4 @@
-INSERT INTO mondictionary.word
+INSERT INTO Word
 (word_id,word,pronunciation,language_id)
 VALUES
 (608,'ကာ',null,2)

@@ -1,4 +1,4 @@
-INSERT INTO mondictionary.definition
+INSERT INTO Definition
 (word_id,language_id,pos_id,definition,example)
 VALUES
 (608,3,1,'၁။ အလုပ်။ အမှု။ ကိစ္စ။','ကာကုသဵု = ကုသိုလ်ရေးအလုပ်။ ကုသိုလ်ရေးကိစ္စ။')

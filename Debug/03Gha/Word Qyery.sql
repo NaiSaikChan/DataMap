@@ -1,4 +1,4 @@
-Insert into mondictionary.word
+Insert into Word
 (word_id,word,pronunciation,language_id)
 Values
 (2830,'ဂ',null,2)

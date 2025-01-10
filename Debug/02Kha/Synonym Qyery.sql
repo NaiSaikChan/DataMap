@@ -1,4 +1,4 @@
-INSERT INTO MonDictionary.synonym 
+INSERT INTO Synonym 
 (word_id,language_id,synonym) VALUES
 (2067,2,'ဂစက်')
 ,(2069,2,'ဂစုက်')

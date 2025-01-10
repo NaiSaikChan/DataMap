@@ -1,4 +1,4 @@
-INSERT INTO mondictionary.definition
+INSERT INTO Definition
 (word_id,language_id,pos_id,definition,example)
 VALUES
 (1051,3,4,'ပေးသည်။','“အဲကဵုကုဍေံ သြန်စှ်ဒကေဝ်ရ။” = “သူ့အား ငွေတစ်ဆယ်ကျပ် ကျွန်မပေးသည်။”')

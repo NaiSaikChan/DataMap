@@ -1,4 +1,4 @@
-INSERT INTO mondictionary.definition
+INSERT INTO Definition
 (word_id,language_id,pos_id,definition,example)
 VALUES
 (1,3,1,'ပထမမွန်ဗျည်း။', NULL)

@@ -1,4 +1,4 @@
-INSERT INTO MonDictionary.Word
+INSERT INTO Word
 (word_id, word, pronunciation, language_id)
 Values
 (2062,'ခ—၁',null,2)
