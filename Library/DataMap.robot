@@ -770,7 +770,7 @@
                 <property name="pattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PartialInputMatchingPatternValueStringExpression">
                   <property name="value" class="String">(\()('word_id')(,)('language_id')(,)('pos_id')(,')(definition)(',)('example')(\))</property>
                 </property>
-                <property name="replaceExp" class="String">$1+dic.word_id+$3+"3"+$5+dic.pos_id+$7+dic.defi+$9+(dic.example!=""?dic.example:"null")+$11</property>
+                <property name="replaceExp" class="String">$1+dic.word_id+$3+"3"+$5+dic.pos_id+$7+dic.defi+$9+(dic.example!=""?dic.example:"NULL")+$11</property>
               </element>
             </property>
           </property>
