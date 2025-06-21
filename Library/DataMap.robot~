@@ -158,7 +158,7 @@
         <property name="name" idref="15"/>
         <property name="stepAction" class="LoadFile">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.FileNameValueStringExpression">
-            <property name="value" class="String">D:\Mon Data\Mon Dictionary\DataMap\Library\SourceTest.txt</property>
+            <property name="value" class="String">D:\Mon Data\Mon Dictionary\DataMap\Debug\19 Hda\SourceText.txt</property>
           </property>
           <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="27">
             <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
@@ -271,7 +271,7 @@
 ကြိ=4
 ကြိဝိ=5
 ဝိ=6
-သမ=7
+သဗဓ=7
 အမဍ=8
 စည်း=9
 ပါ=10
@@ -770,7 +770,7 @@
                 <property name="pattern" class="kapow.robot.plugin.common.support.expression.stringexpr.PartialInputMatchingPatternValueStringExpression">
                   <property name="value" class="String">(\()('word_id')(,)('language_id')(,)('pos_id')(,')(definition)(',)('example')(\))</property>
                 </property>
-                <property name="replaceExp" class="String">$1+dic.word_id+$3+"3"+$5+dic.pos_id+$7+dic.defi+$9+(dic.example!=""?dic.example:"null")+$11</property>
+                <property name="replaceExp" class="String">$1+dic.word_id+$3+"3"+$5+dic.pos_id+$7+dic.defi+$9+(dic.example!=""?dic.example:"NULL")+$11</property>
               </element>
             </property>
           </property>
