@@ -158,7 +158,7 @@
         <property name="name" idref="15"/>
         <property name="stepAction" class="LoadFile">
           <property name="fileNameExpression" class="kapow.robot.plugin.common.support.expression.stringexpr.FileNameValueStringExpression">
-            <property name="value" class="String">D:\Mon Data\Mon Dictionary\DataMap\Debug\19 Hda\SourceText.txt</property>
+            <property name="value" class="String">D:\Mon Data\Mon Dictionary\DataMap\Debug\21 Pa\SourceText.txt</property>
           </property>
           <property name="browserConfigurationSpecification" class="BrowserConfigurationSpecificationWebKit" serializationversion="27">
             <property name="ancestorProvider" class="BrowserConfigurationSpecificationAncestorProviderForStep"/>
