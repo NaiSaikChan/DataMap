@@ -20,6 +20,8 @@ VALUES
 ,('thai','tha','သေံ','သေံ','ယိုးဒယားသက်','ယိုး')
 ,('Hyndhu','Hynd','ဟိန္ဒူ','ဟိန္ဒူ','ဟိန္ဒူသက်ဝေါဟာရ','ဟိန္ဒူ')
 ,('Unknow','Unknow','Unknow','Unknow','Unknow','Unknow')
+,('bengali','ben','ဘင်္ဂါဠဳ','ဘဂဠ','ဘင်္ဂါလီ','ဘဂလ')
+,(,'number','num','ဂၞန်','ဂၞန်','ဂဏန်း','ဂဏန်း')
 ;
 
 SELECT * FROM partofspeech;
