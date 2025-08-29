@@ -1,0 +1,74 @@
+-- Deploy Optimized monbur_dic View
+-- This script creates the optimized view in your database
+-- Remove existing view if it exists
+DROP VIEW IF EXISTS monbur_dic;
+
+-- Create the optimized view
+CREATE VIEW monbur_dic AS
+WITH word_base AS (
+    SELECT 
+        word_id,
+        word,
+        -- More efficient word extraction using INSTR instead of LIKE
+        CASE 
+            WHEN INSTR(word, '—') > 0 THEN SUBSTR(word, 1, INSTR(word, '—') - 1)
+            WHEN INSTR(word, '-') > 0 THEN SUBSTR(word, 1, INSTR(word, '-') - 1)
+            ELSE word 
+        END AS mon_word,
+        COALESCE(pronunciation, '') AS pronunciation
+    FROM Word
+)
+SELECT
+    wb.word_id,
+    wb.mon_word,
+    wb.pronunciation,
+    
+    -- Aggregated POS information with proper NULL handling
+    COALESCE(REPLACE(GROUP_CONCAT(DISTINCT p.pos_id), ',', ', '), '') AS pos_ids,
+    COALESCE(REPLACE(GROUP_CONCAT(DISTINCT p.pos_ENsymbol), ',', ', '), '') AS pos_ENsymbol,
+    COALESCE(REPLACE(GROUP_CONCAT(DISTINCT p.pos_Mmsymbol), ',', ', '), '') AS pos_Mmsymbol,
+    
+    -- Synonyms with proper NULL handling
+    COALESCE(REPLACE(GROUP_CONCAT(DISTINCT s.synonym), ',', ', '), '') AS synonyms_text,
+    
+    -- Definition IDs 
+    COALESCE(REPLACE(GROUP_CONCAT(DISTINCT d.definition_id), ',', ', '), '') AS definition_ids,
+
+    -- Definitions with line breaks
+    COALESCE(GROUP_CONCAT(d.definition, CHAR(10)), '') AS definition,
+    
+    -- Optimized example processing with chained REPLACE operations
+    COALESCE(
+        GROUP_CONCAT(
+            CASE
+                WHEN d.example IS NULL OR TRIM(d.example) = '' THEN '-'
+                ELSE 
+                    REPLACE(
+                        REPLACE(
+                            REPLACE(d.example, ' || ', CHAR(10) || CHAR(10)),
+                            '\\n', CHAR(10)
+                        ),
+                        '\\r', CHAR(10)
+                    )
+            END,
+            CHAR(10)
+        ), 
+        '-'
+    ) AS example
+
+FROM word_base wb
+LEFT JOIN Definition d ON wb.word_id = d.word_id
+LEFT JOIN PartOfSpeech p ON d.pos_id = p.pos_id
+LEFT JOIN Synonym s ON wb.word_id = s.word_id
+
+-- Fixed GROUP BY to use only actual columns, not computed expressions
+GROUP BY wb.word_id, wb.mon_word, p.pos_ENsymbol, p.pos_Mmsymbol
+
+-- Order by mon_word for consistent results
+ORDER BY wb.mon_word COLLATE NOCASE;
+
+-- Verify the view was created successfully
+SELECT 'View created successfully! Sample records:' as status;
+SELECT word_id, mon_word, pos_ENnames, definition FROM monbur_dic LIMIT 3;
+
+SELECT 'Total records in view:' as status, COUNT(*) as count FROM monbur_dic;

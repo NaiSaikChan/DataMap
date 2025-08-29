@@ -1,7 +1,9 @@
 INSERT INTO word
 (word_id, word, pronunciation,language_id)
 VALUES
-(4919,'ၛာ',null,2)
+(17114,'ၛ',NULL,2)
+,(17115,'ၛရာံ',NULL,2)
+,(4919,'ၛာ',null,2)
 ,(4920,'ၛာပန',null,2)
 ,(4921,'ၛာသဲ',null,2)
 ,(4922,'ၛဲ',null,2)

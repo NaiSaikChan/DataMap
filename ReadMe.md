@@ -10,6 +10,7 @@ All content is based on the "A Mon–Burmese Dictionary," compiled by Nai Sac Lu
 The Mon2MM Dictionary aims to make the rich vocabulary and knowledge of Nai Sac Lun's "A Mon–Burmese Dictionary" easily accessible in digital form, supporting the preservation and study of the Mon language.
 
 All dictionary data was meticulously converted and proofread to ensure accuracy and faithfulness to the original printed works.
+If you would like to use, please use the SQLite "monDic.db".
 
 ---
 
@@ -17,6 +18,9 @@ All dictionary data was meticulously converted and proofread to ensure accuracy 
 
 - **Source:**  
   - “A Mon–Burmese Dictionary,” compiled by **Nai Sac Lun** (First & Second Editions)
+  - LastID for RPA note.
+- **Resource:**
+  - After mapped data with RPA generated the SQL query.
 - **Acquisition:**  
   - Data was kindly provided in Microsoft Word format, using the legacy Mon ASCII font call 'Motmalom'.
 - **Conversion:**  
